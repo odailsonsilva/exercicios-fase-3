@@ -114,3 +114,60 @@ header .links a:hover{
     padding: 6px;
     margin: 8px 4px 0 0;
 }
+
+/* FORMATANDO FORMULARIO = TEACHERS/CREATE*/
+.content-sec .item label{
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+input, textarea, button{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="radio"]{
+    width: initial;
+}
+
+.item label.radio{
+    background-color: var(--cor-principal);
+    border-radius: 14px;
+    padding: 6px;
+    margin: 0 4px 0 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+button{
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+button:hover{
+    background-color: green;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+select{
+    width: 100%;
+    padding: 6px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+option{
+    padding: 20px;
+}

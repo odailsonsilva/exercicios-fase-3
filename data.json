@@ -1,0 +1,93 @@
+{
+    "teachers": [
+        {
+            "id": 1,
+            "name": "asfa",
+            "avatar_url": "asfa",
+            "birth": "2020-06-27",
+            "escolaridade": "do",
+            "tipoaula": "presencial",
+            "materias": "asf"
+        },
+        {
+            "id": 2,
+            "name": "asfa",
+            "avatar_url": "asfa",
+            "birth": "2020-06-27",
+            "escolaridade": "do",
+            "tipoaula": "presencial",
+            "materias": "asf"
+        },
+        {
+            "id": 3,
+            "name": "asfa",
+            "avatar_url": "asfa",
+            "birth": "2020-06-27",
+            "escolaridade": "do",
+            "tipoaula": "presencial",
+            "materias": "asf"
+        },
+        {
+            "id": 4,
+            "name": "odailson gonçalves costa silva",
+            "avatar_url": "http://www.google.com",
+            "birth": "2020-06-03",
+            "escolaridade": "esc",
+            "tipoaula": "presencial",
+            "materias": "as"
+        },
+        {
+            "id": 5,
+            "name": "odailson gonçalves costa silva",
+            "avatar_url": "http://www.google.com",
+            "birth": "2020-06-03",
+            "escolaridade": "esc",
+            "tipoaula": "presencial",
+            "materias": "as"
+        },
+        {
+            "id": 6,
+            "name": "asfa",
+            "avatar_url": "asfa",
+            "birth": "2020-06-27",
+            "escolaridade": "emc",
+            "tipoaula": "presencial",
+            "materias": "as"
+        },
+        {
+            "id": 7,
+            "name": "asf",
+            "avatar_url": "fa",
+            "birth": "2020-06-13",
+            "escolaridade": "emc",
+            "tipoaula": "presencial",
+            "materias": "af"
+        },
+        {
+            "id": 8,
+            "name": "francinete",
+            "avatar_url": "http://www.tecmundo.com",
+            "birth": 1580169600000,
+            "escolaridade": "Doutorado",
+            "tipoaula": "presencial",
+            "materias": [
+                "Crossfit",
+                " Musculacao",
+                " Enfermagem"
+            ]
+        },
+        {
+            "id": 9,
+            "name": "francinete",
+            "avatar_url": "http://www.tecmundo.com",
+            "birth": 1580169600000,
+            "escolaridade": "Doutorado",
+            "tipoaula": "presencial",
+            "materias": [
+                "Crossfit",
+                " Musculacao",
+                " Enfermagem"
+            ]
+        }
+    ]
+}
