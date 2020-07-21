@@ -1,0 +1,67 @@
+  
+  <div class="item">
+      <Label for="name">Nome</label>
+      <input type="text" name="name" id="name" placeholder="Seu nome" value="{{teacher.name}}">
+  </div>
+
+  <div class="item">
+      <Label for="avatar_url">Avatar url</label>
+      <input type="text" name="avatar_url" id="avatar_url"  placeholder="http://" value="{{teacher.avatar_url}}">
+  </div>
+
+  <div class="item">
+      <Label for="birth">Data de Nascimento</label>
+      <input type="date" name="birth" id="birth" value="{{teacher.birth_date}}">
+      
+  </div>
+
+  <div class="item">
+      <Label for="escolaridade">Escolaridade</label>
+          <select name="escolaridade" id="escolaridade">
+              <option value="" >--------------------ESCOLHA SUA ESCOLARIDADE----------------</option>
+              <option value="emc"
+              {% if teacher.education_level == "emc" %}
+                  selected
+              {% endif %}>Ensino Médio Completo</option>
+              <option value="esc"
+              {% if teacher.education_level == "esc" %}
+                  selected
+              {% endif %}>Ensino Superior Completo</option>
+              <option value="me"
+              {% if teacher.education_level == "me" %}
+                  selected
+              {% endif %}>Mestrado</option>
+              <option value="do"
+              {% if teacher.education_level == "do" %}
+                  selected
+              {% endif %}>Doutorado</option>
+          </select>
+  </div>
+
+  <div class="item">
+      <div for="tipoAula">Tipo de Aula</div>
+          <label class="radio" for="tipoAula">
+          <input
+           type="radio" 
+           id="tipoAula" 
+           name="tipoAula" 
+           value="presencial" 
+           {% if teacher.class_type == "presencial" %}
+                checked
+           {% endif %}>presencial</label>
+          <label class="radio" for="tipoAula2">
+          <input 
+          type="radio" 
+          id="tipoAula2" 
+          name="tipoAula" 
+          value="distancia"
+          {% if teacher.class_type == "distancia" %}
+                checked
+          {% endif %}>à distancia</label>
+  </div>
+
+  <div class="item">
+      <Label for="materias" style="margin-bottom: 20px;">Materias Lecionadas
+      <input type="text" name="materias" id="materias" cols="20" rows="6"  placeholder="Digite as materias separadas por vírgula" value="{{teacher.materias}}"></label>
+  </div>
+  <button type="submit">SALVAR</button>

@@ -108,7 +108,8 @@ header .links a:hover{
     font-weight: bold;
 }
 
-.content-sec .item span{
+.content-sec .item span, tbody span.materia, tbody td a,.tb a{
+    display: inline-block;
     background-color: var(--cor-principal);
     border-radius: 14px;
     padding: 6px;
@@ -155,6 +156,15 @@ button{
     border-radius: 8px;
 }
 
+button.deletar{
+    background-color: brown;
+    margin-top: 8px;
+}
+
+button.deletar:hover{
+    background-color: rgb(116, 14, 14);
+}
+
 button:hover{
     background-color: green;
     cursor: pointer;
@@ -170,4 +180,146 @@ select{
 
 option{
     padding: 20px;
+}
+
+.content-sec a {
+    background-color: var(--cor-principal);
+    border-radius: 4px;
+    padding: 8px 32px;
+    margin: 8px 4px 0 0;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    color: white;
+}
+
+/* TABLEA - INDEX */
+.tb{
+    display: block;
+    padding: 40px;
+}
+
+.tb table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+table thead tr th{
+    text-align: left;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 16px;
+}
+
+table thead tr th, td{
+    padding: 16px;
+}
+
+td, th {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+tr:last-child{
+    border-bottom: none;
+}
+
+tbody tr td:first-child{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span{
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid white;
+}
+
+tbody td span.materia{
+    margin-top: 0px;
+}
+
+tbody td a, .tb a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 0;
+    margin-left: 8px;
+}
+
+.links a.active{
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+/*FILTRO*/
+.tb .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.tb .header a{
+    width: 100px;
+    margin: 0;
+}
+
+.div-content .header form {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-gap: 10px;
+}
+
+
+.tb .header input {
+    border: 1px solid #eee;
+    padding: 4px;
+}
+
+.tb .header button {
+    width: 100px;
+    font-size: 16px;
+    text-transform: inherit;
+    font-weight: 400;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/*pagination*/
+.tb{
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.tb .header{
+    margin: 0;
+    align-self: start;
+}
+
+.tb .pagination{
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.pagination a,
+.pagination span{
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pagination a:hover{
+    filter: brightness(0.3);
+    border-bottom : 1px solid var(--primary-color);
 }

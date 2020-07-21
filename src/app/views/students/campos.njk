@@ -1,0 +1,84 @@
+  
+  <div class="item">
+      <Label for="name">Nome</label>
+      <input type="text" name="name" id="name" placeholder="Seu nome" value="{{student.name}}">
+  </div>
+
+  <div class="item">
+      <Label for="avatar_url">Avatar url</label>
+      <input type="text" name="avatar_url" id="avatar_url"  placeholder="http://" value="{{student.avatar_url}}">
+  </div>
+
+  <div class="item">
+      <Label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Seu email" value="{{student.email}}">
+  </div>
+
+  <div class="item">
+      <Label for="birth">Data de Nascimento</label>
+      <input type="date" name="birth" id="birth" value="{{student.birth_date}}">  
+  </div>
+
+  <div class="item">
+      <Label for="ano">Ano escolar</label>
+          <select name="ano" id="ano">
+              <option value="" >--------------------ESCOLHA SEU ANO ESCOLAR----------------</option>
+              <option value="5f"
+              {% if student.ano == "5f" %}
+                  selected
+              {% endif %}>5º ano Fundamental</option>
+              <option value="6f"
+              {% if student.ano == "6f" %}
+                  selected
+              {% endif %}>6º ano Fundamental</option>
+              <option value="7f"
+              {% if student.ano == "7f" %}
+                  selected
+              {% endif %}>7º ano Fundamental</option>
+              <option value="8f"
+              {% if student.ano == "8f" %}
+                  selected
+              {% endif %}>8º ano Fundamental</option>
+              <option value="9f"
+              {% if student.ano == "9f" %}
+                  selected
+              {% endif %}>9º ano Fundamental</option>
+              <option value="1m"
+              {% if student.ano == "1m" %}
+                  selected
+              {% endif %}>1º ano Médio</option>
+              <option value="2m"
+              {% if student.ano == "2m" %}
+                  selected
+              {% endif %}>2º ano Médio</option>
+              <option value="3m"
+              {% if student.ano == "3m" %}
+                  selected
+              {% endif %}>3º ano Médio</option>
+          </select>
+  </div>
+
+  <div class="item">
+      <Label for="chs">Carga Horária Semanal</label>
+      <input type="number" name="chs" id="chs" placeholder="20" value="{{student.chs}}">
+  </div>
+
+    <div class="item">
+      <Label for="teacher">Aluno de</label>
+          <select name="teacher" id="teacher">
+              {%for teacher in teachersOptions%}
+                <option value="{{teacher.id}}"
+                {% if students.teacher_id  == teacher.id %}
+                    selected
+                {% endif %}>{{teacher.name}}</option>
+              {%endfor%}
+          </select>
+    </div>
+
+
+
+ 
+  
+
+ 
+  <button type="submit">SALVAR</button>

@@ -1,0 +1,10 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+        <div class="div-content">
+            <section class="img-sec" style="background: url('http://source.unsplash.com/collection/517198/500x500') center center / cover no-repeat"></section>
+            <form class="content-sec" method="POST" action="/teachers">
+                {% include "teachers/campos.njk" %}
+            </form>
+        </div>
+{% endblock %}

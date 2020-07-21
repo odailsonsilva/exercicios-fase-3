@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+        <div class="div-content">
+            <section class="img-sec" style="background: url('http://source.unsplash.com/collection/517198/500x500') center center / cover no-repeat"></section>
+            <div class="content-sec">
+            <form method="POST" action="/students?_method=PUT">
+                
+                <h2>Editar Estudante</h2>
+                {% include "students/campos.njk" %} 
+                <input type="hidden" name="id" value="{{student.id}}">
+            </form>
+
+            <form method="POST" id="form-delete" action="/students?_method=DELETE">
+                <input type="hidden" name="id" value="{{student.id}}"/>
+                <button class="deletar" type="submit">DELETAR</button>
+            </form>
+            </div>
+
+            <script>
+                const formDelete = document.querySelector('#form-delete')
+                formDelete.addEventListener('submit', function(event){
+                const confirmation = confirm("Deseja Deletar?")
+                if(!confirmation){
+                event.preventDefault() //previne o event padrão (no caso deletar)
+                }
+                })
+            </script>
+        </div>
+{% endblock %}

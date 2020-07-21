@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+        <div class="div-content">
+            <section class="img-sec" style="background: url('{{student.avatar_url}}500x500') center center / cover no-repeat"></section>
+            <section class="content-sec">
+                <h2>Detalhes Estudante</h2>
+                <div class="item">
+                    <div>Nome</div>
+                    <div>{{student.name}}</div>
+                </div>
+
+                <div class="item">
+                    <div>Email</div>
+                    <div>{{student.email}}</div>
+                </div>
+
+                <div class="item">
+                    <div>Idade</div>
+                    <div>{{student.age}}</div>
+                </div>
+
+                <div class="item">
+                    <div>Ano Escolar</div>
+                    <div>{{student.ano}}</div>
+                </div>
+
+                <div class="item">
+                    <div>Carga Horária Semanal</div>
+                    <div>{{student.chs}}</div>
+                </div>
+                
+                <div class="item">
+                    <div>Aluno de</div>
+                    <div>{{student.teacher_name}}</div>
+                </div>
+
+                <a href="/students/{{student.id}}/edit">Editar</a>
+            </section>
+        </div>
+{% endblock %}
